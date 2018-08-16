@@ -11,8 +11,6 @@ public class LRU<K, V> implements Iterable<K>{
 	private HashMap<K, Node> map;
 	private int maxSize;
 
-
-
 	public LRU(int maxSize){
 		this.maxSize = maxSize;
 		this.map = new HashMap<>(maxSize * 4 / 3);
@@ -24,23 +22,83 @@ public class LRU<K, V> implements Iterable<K>{
 		tail.pre = head;
 	}
 
+	public V get(K key){
+		if (!map.containsKey(key)){
+			return null;
+		}
 
+		Node node = map.get(key);
+		unlink(node);
+		appendHead(node);
+
+		return node.v;
+	}
+
+	public void put(K key, V value){
+		if (map.containsKey(key)){
+			Node node = map.get(key);
+			unlink(node);
+		}
+
+		Node node = new Node(key, value);
+		map.put(key, node);
+		appendHead(node);
+
+		if (map.size() > maxSize){
+			Node toRemove = removeTail();
+			map.remove(toRemove);
+		}
+	}
+
+	private void unlink(Node node){
+		Node pre = node.pre;
+		node.pre = node.next;
+		node.next = pre;
+
+//		Node pre = node.pre;
+//		Node next = node.next;
+//		pre.next = next;
+//		next.pre = pre;
+	}
+	private void appendHead(Node node){
+		node.next = head.next;
+		head.next = node;
+
+//		Node second = head;
+//		second.pre = head;
+//
+//		head = node;
+//		head.pre = null;
+//		head.next = second;
+	}
+	private Node removeTail(){
+		Node node = tail.pre;
+		node.pre = tail;
+
+//		Node node = tail.pre;
+//		tail = node.pre;
+//		node.next = null;
+		return node;
+	}
 
 	@Override
 	public Iterator<K> iterator() {
-		return null;
+		return new Iterator<K>() {
+			private Node cur = head.next;
+
+			@Override
+			public boolean hasNext() {
+				return cur != tail;
+			}
+
+			@Override
+			public K next() {
+				Node node = cur;
+				cur = cur.next;
+				return node.k;
+			}
+		};
 	}
-
-	@Override
-	public void forEach(Consumer<? super K> action) {
-
-	}
-
-	@Override
-	public Spliterator<K> spliterator() {
-		return null;
-	}
-
 
 	private class Node{
 		Node pre;
@@ -48,7 +106,7 @@ public class LRU<K, V> implements Iterable<K>{
 		K k;
 		V v;
 
-		public Node(K k, V v){
+		Node(K k, V v){
 			this.k = k;
 			this.v = v;
 		}
