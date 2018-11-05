@@ -1,10 +1,12 @@
 package com.lkg.study.Cyc2018.Algorithm.Cache;
 
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Created by lkg on 2018/8/16
