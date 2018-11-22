@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 /**
+ * 	1   两数之和
+ *
  * 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
  *
  * 你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
@@ -14,7 +16,7 @@ import java.util.HashMap;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  */
-public class Solution {
+public class twoSum {
 
     public static void main(String[] args){
         int[] nums = {2, 7, 11, 15};
