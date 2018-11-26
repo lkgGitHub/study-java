@@ -1,7 +1,5 @@
 package com.lkg.study.leetcode;
 
-import java.util.Arrays;
-
 /**
  * 13. 罗马数字转整数
  *
@@ -50,10 +48,11 @@ import java.util.Arrays;
 public class romanToInt {
 
     public static void main(String[] args) {
-        System.out.println(romanToInt1("MCMXCIV"));
+        System.out.println(romanToInt1(null));
     }
     
     private static int romanToInt1(String s) {
+        if (s == null) return 0;
         char[] str = s.toCharArray();//char数组
         int total = 0;
         if (str.length == 1){
