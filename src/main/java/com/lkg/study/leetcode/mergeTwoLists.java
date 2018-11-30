@@ -50,8 +50,8 @@ public class mergeTwoLists {
 
         if (l1 == null)
             node.next = l2;
-        else if (l2 == null)
-            node.next = l1;
+        else node.next = l1;
+
         return head.next;
     }
 }
