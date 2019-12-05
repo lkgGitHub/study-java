@@ -1,5 +1,5 @@
-package com.lkg.study.spark
-import org.apache.spark
+package com.lkg.study
+
 import org.apache.spark.{SparkConf, SparkContext}
 
 object scalaSpark {
