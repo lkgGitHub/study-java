@@ -190,6 +190,19 @@
             <artifactId>commons-csv</artifactId>
             <version>1.7</version>
         </dependency>
+
+        <!--share pom start -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <!--share pom end -->
     </dependencies>
 
     <build>
@@ -202,4 +215,5 @@
     </build>
 
 
-</project>
+
+                                     </project>
