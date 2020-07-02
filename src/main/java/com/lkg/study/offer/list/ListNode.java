@@ -1,4 +1,4 @@
-package com.lkg.study.offer.listSolution;
+package com.lkg.study.offer.list;
 
 // 单向链表，Definition for singly-linked list.
 public class ListNode {

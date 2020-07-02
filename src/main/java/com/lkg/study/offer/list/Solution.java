@@ -1,4 +1,4 @@
-package com.lkg.study.offer.listSolution;
+package com.lkg.study.offer.list;
 
 import java.util.Stack;
 
