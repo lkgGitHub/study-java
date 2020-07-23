@@ -26,7 +26,7 @@ public class offer11 {
             case 1: return numbers[0];
         }
         int left = 0, right = len - 1;
-        while (end-)
+//        while ()
 
 
 //        int left = 0, right = len - 1;
@@ -44,6 +44,7 @@ public class offer11 {
 //        }else {
 //            return numbers[right];
 //        }
+        return 1;
     }
 
 
