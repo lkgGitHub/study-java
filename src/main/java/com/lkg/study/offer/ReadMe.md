@@ -53,7 +53,7 @@
 树的前序、中序、后序遍历算法，递归的实现明显比循环更简单
 
 
-## 题解
+# 题解
 以下所有题目均来源 [LeetCode 中国官网](https://leetcode-cn.com/problemset/lcof/)，题解由 [doocs/leetcode 贡献者](https://github.com/doocs/leetcode/graphs/contributors) 提供，正在完善中，欢迎贡献你的题解！
 
 |是否完成|  题号  |  题解  |  标签  | 难度  |
