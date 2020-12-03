@@ -21,11 +21,6 @@ public class Offer12 {
 
     public boolean exist(char[][] board, String word) {
 
-        for (char[] row: board){
-            for (char c: row){
-
-            }
-        }
-
+      return true;
     }
 }

@@ -23,7 +23,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spark.version>2.3.4</spark.version>
         <scala.version>2.11</scala.version>
-        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
