@@ -1,4 +1,4 @@
-package com.lkg.study
+package com.lkg.spring
 
 import org.apache.spark.{SparkConf, SparkContext}
 

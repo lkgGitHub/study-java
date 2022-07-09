@@ -1,4 +1,4 @@
-package com.lkg.study
+package com.lkg.spring
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
