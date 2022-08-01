@@ -11,7 +11,7 @@ public class hdfsDemo {
 
     public static void main(String[] args) throws Exception {
         Configuration conf=new Configuration();
-        conf.set("fs.defaultFS", "hdfs://11.11.210.147:8020");
+        conf.set("fs.defaultFS", "hdfs://192.168.2.89:8020");
         FileSystem hdfs = FileSystem.get(conf);
         Path path = new Path(args[1]);
         List<String> pathList = listFilesRecursive(hdfs, path);
@@ -89,7 +89,7 @@ public class hdfsDemo {
     private static void create_delete_file() throws IOException {
         // 1、创建Configuration对象
         Configuration conf=new Configuration();
-        conf.set("fs.defaultFS", "hdfs://11.11.210.147/:8020");
+        conf.set("fs.defaultFS", "hdfs://192.168.136.128:8020");
         // 2、利用FileSystem 的静态get方法获取FileSystem 实例
         FileSystem hdfs = FileSystem.get(conf);
         // 3、调用FileSystem 的方法进行实际的文件操作

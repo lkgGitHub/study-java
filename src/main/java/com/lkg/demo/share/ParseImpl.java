@@ -8,7 +8,7 @@ import java.io.IOException;
 public class ParseImpl {
 
     public static void main(String[] args) throws IOException {
-        String path = "C:\\Users\\lkg\\Desktop\\统一安全展示平台-定制开发工时进度估算.xlsx";
+        String path = "/aaa.xlsx";
         System.out.println(ExcelUtils.getSheetNames(path));
     }
     
